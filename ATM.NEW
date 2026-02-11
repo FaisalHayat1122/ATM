@@ -1,0 +1,27 @@
+control=True
+while control:
+    card=int(input("Insert your Card: \n1. Card inserted \n2. card error"))
+    if card==1:
+        chance=3
+        while chance>=0:
+            pin=int(input("Enter Your Pin to proceed:"))
+            if pin==1234:
+                print("Welcome to the Atm")
+                control=False
+                break
+            else:
+                print(f"you have {chance} chances left! ")
+                chance=chance-1
+                continue
+        else:
+            print("Card has been captured!")
+            break
+              #break          
+    else:
+        print("Card Error")
+        rerun=int(input("Do you want to insert card again? \n1. yes \n2. NO:"))
+        if rerun==1:
+            continue
+        else:
+            print("Thank you for visiting us!")
+            break
